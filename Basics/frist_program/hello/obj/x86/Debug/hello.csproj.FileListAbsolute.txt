@@ -1,0 +1,4 @@
+E:\csharp_series\frist_program\hello\bin\Debug\hello.exe
+E:\csharp_series\frist_program\hello\bin\Debug\hello.pdb
+E:\csharp_series\frist_program\hello\obj\x86\Debug\hello.exe
+E:\csharp_series\frist_program\hello\obj\x86\Debug\hello.pdb
