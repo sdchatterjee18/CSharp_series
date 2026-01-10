@@ -1,0 +1,4 @@
+E:\csharp_series\Additon_1st\Addition\bin\Debug\Addition.exe
+E:\csharp_series\Additon_1st\Addition\bin\Debug\Addition.pdb
+E:\csharp_series\Additon_1st\Addition\obj\x86\Debug\Addition.exe
+E:\csharp_series\Additon_1st\Addition\obj\x86\Debug\Addition.pdb
