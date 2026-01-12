@@ -1,0 +1,4 @@
+E:\csharp_series\Content_holder\Content_holder\bin\Debug\Content_holder.exe
+E:\csharp_series\Content_holder\Content_holder\bin\Debug\Content_holder.pdb
+E:\csharp_series\Content_holder\Content_holder\obj\x86\Debug\Content_holder.exe
+E:\csharp_series\Content_holder\Content_holder\obj\x86\Debug\Content_holder.pdb
