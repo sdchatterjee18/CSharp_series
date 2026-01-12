@@ -1,0 +1,4 @@
+E:\csharp_series\user_input\user_input\bin\Debug\user_input.exe
+E:\csharp_series\user_input\user_input\bin\Debug\user_input.pdb
+E:\csharp_series\user_input\user_input\obj\x86\Debug\user_input.exe
+E:\csharp_series\user_input\user_input\obj\x86\Debug\user_input.pdb
