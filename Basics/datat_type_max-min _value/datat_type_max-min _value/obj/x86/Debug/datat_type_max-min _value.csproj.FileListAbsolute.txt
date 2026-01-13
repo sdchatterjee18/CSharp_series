@@ -1,0 +1,4 @@
+E:\csharp_series\Basics\datat_type_max-min _value\datat_type_max-min _value\bin\Debug\datat_type_max-min _value.exe
+E:\csharp_series\Basics\datat_type_max-min _value\datat_type_max-min _value\bin\Debug\datat_type_max-min _value.pdb
+E:\csharp_series\Basics\datat_type_max-min _value\datat_type_max-min _value\obj\x86\Debug\datat_type_max-min _value.exe
+E:\csharp_series\Basics\datat_type_max-min _value\datat_type_max-min _value\obj\x86\Debug\datat_type_max-min _value.pdb
