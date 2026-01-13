@@ -2,3 +2,5 @@ E:\csharp_series\null_coalescing_operator\null_coalescing_operator\bin\Debug\nul
 E:\csharp_series\null_coalescing_operator\null_coalescing_operator\bin\Debug\null_coalescing_operator.pdb
 E:\csharp_series\null_coalescing_operator\null_coalescing_operator\obj\x86\Debug\null_coalescing_operator.exe
 E:\csharp_series\null_coalescing_operator\null_coalescing_operator\obj\x86\Debug\null_coalescing_operator.pdb
+E:\csharp_series\Basics\null_coalescing_operator\null_coalescing_operator\obj\x86\Debug\null_coalescing_operator.exe
+E:\csharp_series\Basics\null_coalescing_operator\null_coalescing_operator\obj\x86\Debug\null_coalescing_operator.pdb

@@ -5,7 +5,7 @@ namespace null_coalescing_operator
     {
         static void Main(string[] args)
         {
-            string  choose;
+            string choose;
             Console.WriteLine("low for cold/medium for hot/high for very very hot/press enter for nothing");
             Console.WriteLine("choose what you want");
             choose = Console.ReadLine();
@@ -27,6 +27,11 @@ namespace null_coalescing_operator
                     break;
             }
             Console.Read();
+
+            //int? a = null;
+            //Console.WriteLine("Enter 1 for tea 2 for no milk");
+            //a = Convert.ToInt32(Console.ReadLine());
+            
         }
     }
 }

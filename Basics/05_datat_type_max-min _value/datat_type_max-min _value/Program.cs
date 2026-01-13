@@ -29,7 +29,7 @@ namespace datat_type_max_min__value
             Console.WriteLine("Minimum value of float :" + Single.MinValue);
             Console.ReadLine();
 
-            
+       
         }
     }
 }
