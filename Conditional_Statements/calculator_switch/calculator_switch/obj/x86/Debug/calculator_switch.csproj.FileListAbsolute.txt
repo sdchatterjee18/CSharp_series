@@ -1,0 +1,4 @@
+E:\csharp_series\Basics\calculator_switch\calculator_switch\bin\Debug\calculator_switch.exe
+E:\csharp_series\Basics\calculator_switch\calculator_switch\bin\Debug\calculator_switch.pdb
+E:\csharp_series\Basics\calculator_switch\calculator_switch\obj\x86\Debug\calculator_switch.exe
+E:\csharp_series\Basics\calculator_switch\calculator_switch\obj\x86\Debug\calculator_switch.pdb
