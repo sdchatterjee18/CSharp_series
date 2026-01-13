@@ -1,0 +1,4 @@
+E:\csharp_series\Basics\Datatype_size\Datatype_size\bin\Debug\Datatype_size.exe
+E:\csharp_series\Basics\Datatype_size\Datatype_size\bin\Debug\Datatype_size.pdb
+E:\csharp_series\Basics\Datatype_size\Datatype_size\obj\x86\Debug\Datatype_size.exe
+E:\csharp_series\Basics\Datatype_size\Datatype_size\obj\x86\Debug\Datatype_size.pdb
