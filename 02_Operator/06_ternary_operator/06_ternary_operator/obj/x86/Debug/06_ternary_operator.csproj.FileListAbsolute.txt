@@ -1,0 +1,4 @@
+E:\csharp_series\02_Operator\06_ternary_operator\06_ternary_operator\bin\Debug\06_ternary_operator.exe
+E:\csharp_series\02_Operator\06_ternary_operator\06_ternary_operator\bin\Debug\06_ternary_operator.pdb
+E:\csharp_series\02_Operator\06_ternary_operator\06_ternary_operator\obj\x86\Debug\06_ternary_operator.exe
+E:\csharp_series\02_Operator\06_ternary_operator\06_ternary_operator\obj\x86\Debug\06_ternary_operator.pdb
