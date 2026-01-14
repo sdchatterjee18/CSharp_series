@@ -1,0 +1,4 @@
+E:\csharp_series\02_Operator\Relational_operator\Relational_operator\bin\Debug\Relational_operator.exe
+E:\csharp_series\02_Operator\Relational_operator\Relational_operator\bin\Debug\Relational_operator.pdb
+E:\csharp_series\02_Operator\Relational_operator\Relational_operator\obj\x86\Debug\Relational_operator.exe
+E:\csharp_series\02_Operator\Relational_operator\Relational_operator\obj\x86\Debug\Relational_operator.pdb

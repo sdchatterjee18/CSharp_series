@@ -1,0 +1,4 @@
+E:\csharp_series\02_Operator\Assignment_operator\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+E:\csharp_series\02_Operator\Assignment_operator\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+E:\csharp_series\02_Operator\Assignment_operator\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
+E:\csharp_series\02_Operator\Assignment_operator\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb

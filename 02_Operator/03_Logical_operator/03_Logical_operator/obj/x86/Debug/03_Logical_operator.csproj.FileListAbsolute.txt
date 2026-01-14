@@ -1,0 +1,4 @@
+E:\csharp_series\02_Operator\03_Logical_operator\03_Logical_operator\bin\Debug\03_Logical_operator.exe
+E:\csharp_series\02_Operator\03_Logical_operator\03_Logical_operator\bin\Debug\03_Logical_operator.pdb
+E:\csharp_series\02_Operator\03_Logical_operator\03_Logical_operator\obj\x86\Debug\03_Logical_operator.exe
+E:\csharp_series\02_Operator\03_Logical_operator\03_Logical_operator\obj\x86\Debug\03_Logical_operator.pdb
