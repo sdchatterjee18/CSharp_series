@@ -1,0 +1,4 @@
+E:\csharp_series\02_Operator\05_bitwise_operator\05_bitwise_operator\bin\Debug\05_bitwise_operator.exe
+E:\csharp_series\02_Operator\05_bitwise_operator\05_bitwise_operator\bin\Debug\05_bitwise_operator.pdb
+E:\csharp_series\02_Operator\05_bitwise_operator\05_bitwise_operator\obj\x86\Debug\05_bitwise_operator.exe
+E:\csharp_series\02_Operator\05_bitwise_operator\05_bitwise_operator\obj\x86\Debug\05_bitwise_operator.pdb
