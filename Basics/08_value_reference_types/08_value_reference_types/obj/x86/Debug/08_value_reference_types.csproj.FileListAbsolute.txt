@@ -1,0 +1,4 @@
+E:\csharp_series\Basics\08_value_reference_types\08_value_reference_types\bin\Debug\08_value_reference_types.exe
+E:\csharp_series\Basics\08_value_reference_types\08_value_reference_types\bin\Debug\08_value_reference_types.pdb
+E:\csharp_series\Basics\08_value_reference_types\08_value_reference_types\obj\x86\Debug\08_value_reference_types.exe
+E:\csharp_series\Basics\08_value_reference_types\08_value_reference_types\obj\x86\Debug\08_value_reference_types.pdb
