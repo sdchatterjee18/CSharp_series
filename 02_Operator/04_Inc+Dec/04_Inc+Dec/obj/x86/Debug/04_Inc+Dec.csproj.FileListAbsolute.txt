@@ -1,0 +1,4 @@
+E:\csharp_series\02_Operator\04_Inc+Dec\04_Inc+Dec\bin\Debug\04_Inc+Dec.exe
+E:\csharp_series\02_Operator\04_Inc+Dec\04_Inc+Dec\bin\Debug\04_Inc+Dec.pdb
+E:\csharp_series\02_Operator\04_Inc+Dec\04_Inc+Dec\obj\x86\Debug\04_Inc+Dec.exe
+E:\csharp_series\02_Operator\04_Inc+Dec\04_Inc+Dec\obj\x86\Debug\04_Inc+Dec.pdb
