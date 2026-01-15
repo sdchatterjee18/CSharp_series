@@ -1,0 +1,4 @@
+E:\csharp_series\Methods\01_Using_Static\01_Using_Static\bin\Debug\01_Using_Static.exe
+E:\csharp_series\Methods\01_Using_Static\01_Using_Static\bin\Debug\01_Using_Static.pdb
+E:\csharp_series\Methods\01_Using_Static\01_Using_Static\obj\x86\Debug\01_Using_Static.exe
+E:\csharp_series\Methods\01_Using_Static\01_Using_Static\obj\x86\Debug\01_Using_Static.pdb
