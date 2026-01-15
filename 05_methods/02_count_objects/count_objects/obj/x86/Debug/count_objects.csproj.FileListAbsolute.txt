@@ -1,0 +1,8 @@
+E:\csharp_series\Methods\count_objects\count_objects\bin\Debug\count_objects.exe
+E:\csharp_series\Methods\count_objects\count_objects\bin\Debug\count_objects.pdb
+E:\csharp_series\Methods\count_objects\count_objects\obj\x86\Debug\count_objects.exe
+E:\csharp_series\Methods\count_objects\count_objects\obj\x86\Debug\count_objects.pdb
+E:\csharp_series\Methods\02_count_objects\count_objects\obj\x86\Debug\count_objects.exe
+E:\csharp_series\Methods\02_count_objects\count_objects\obj\x86\Debug\count_objects.pdb
+E:\csharp_series\Methods\02_count_objects\count_objects\bin\Debug\count_objects.exe
+E:\csharp_series\Methods\02_count_objects\count_objects\bin\Debug\count_objects.pdb
