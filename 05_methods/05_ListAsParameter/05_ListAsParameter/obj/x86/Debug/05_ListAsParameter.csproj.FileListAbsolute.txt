@@ -1,0 +1,4 @@
+E:\csharp_series\05_methods\05_ListAsParameter\05_ListAsParameter\bin\Debug\05_ListAsParameter.exe
+E:\csharp_series\05_methods\05_ListAsParameter\05_ListAsParameter\bin\Debug\05_ListAsParameter.pdb
+E:\csharp_series\05_methods\05_ListAsParameter\05_ListAsParameter\obj\x86\Debug\05_ListAsParameter.exe
+E:\csharp_series\05_methods\05_ListAsParameter\05_ListAsParameter\obj\x86\Debug\05_ListAsParameter.pdb
