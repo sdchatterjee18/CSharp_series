@@ -1,0 +1,4 @@
+E:\csharp_series\Methods\04_outer_parameter\04_outer_parameter\bin\Debug\04_outer_parameter.exe
+E:\csharp_series\Methods\04_outer_parameter\04_outer_parameter\bin\Debug\04_outer_parameter.pdb
+E:\csharp_series\Methods\04_outer_parameter\04_outer_parameter\obj\x86\Debug\04_outer_parameter.exe
+E:\csharp_series\Methods\04_outer_parameter\04_outer_parameter\obj\x86\Debug\04_outer_parameter.pdb
