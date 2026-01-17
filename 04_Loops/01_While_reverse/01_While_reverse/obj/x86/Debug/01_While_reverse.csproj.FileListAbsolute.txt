@@ -1,0 +1,4 @@
+E:\csharp_series\04_Loops\01_While_reverse\01_While_reverse\bin\Debug\01_While_reverse.exe
+E:\csharp_series\04_Loops\01_While_reverse\01_While_reverse\bin\Debug\01_While_reverse.pdb
+E:\csharp_series\04_Loops\01_While_reverse\01_While_reverse\obj\x86\Debug\01_While_reverse.exe
+E:\csharp_series\04_Loops\01_While_reverse\01_While_reverse\obj\x86\Debug\01_While_reverse.pdb
