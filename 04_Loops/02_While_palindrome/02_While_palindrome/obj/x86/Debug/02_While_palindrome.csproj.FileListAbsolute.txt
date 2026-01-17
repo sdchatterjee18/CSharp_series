@@ -1,0 +1,4 @@
+E:\csharp_series\04_Loops\02_While_palindrome\02_While_palindrome\bin\Debug\02_While_palindrome.exe
+E:\csharp_series\04_Loops\02_While_palindrome\02_While_palindrome\bin\Debug\02_While_palindrome.pdb
+E:\csharp_series\04_Loops\02_While_palindrome\02_While_palindrome\obj\x86\Debug\02_While_palindrome.exe
+E:\csharp_series\04_Loops\02_While_palindrome\02_While_palindrome\obj\x86\Debug\02_While_palindrome.pdb
