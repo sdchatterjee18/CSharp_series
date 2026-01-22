@@ -1,0 +1,4 @@
+E:\csharp_series\06_constructor\01_constructor_1\01_constructor_1\bin\Debug\01_constructor_1.exe
+E:\csharp_series\06_constructor\01_constructor_1\01_constructor_1\bin\Debug\01_constructor_1.pdb
+E:\csharp_series\06_constructor\01_constructor_1\01_constructor_1\obj\x86\Debug\01_constructor_1.exe
+E:\csharp_series\06_constructor\01_constructor_1\01_constructor_1\obj\x86\Debug\01_constructor_1.pdb
