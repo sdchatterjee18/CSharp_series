@@ -1,0 +1,4 @@
+E:\csharp_series\06_constructor\04_objAsParameter\04_objAsParameter\bin\Debug\04_objAsParameter.exe
+E:\csharp_series\06_constructor\04_objAsParameter\04_objAsParameter\bin\Debug\04_objAsParameter.pdb
+E:\csharp_series\06_constructor\04_objAsParameter\04_objAsParameter\obj\x86\Debug\04_objAsParameter.exe
+E:\csharp_series\06_constructor\04_objAsParameter\04_objAsParameter\obj\x86\Debug\04_objAsParameter.pdb

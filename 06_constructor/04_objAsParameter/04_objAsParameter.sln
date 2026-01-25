@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_objAsParameter", "04_objAsParameter\04_objAsParameter.csproj", "{EB054D9A-B1EC-4A43-8B54-CD347222E0FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB054D9A-B1EC-4A43-8B54-CD347222E0FF}.Debug|x86.ActiveCfg = Debug|x86
+		{EB054D9A-B1EC-4A43-8B54-CD347222E0FF}.Debug|x86.Build.0 = Debug|x86
+		{EB054D9A-B1EC-4A43-8B54-CD347222E0FF}.Release|x86.ActiveCfg = Release|x86
+		{EB054D9A-B1EC-4A43-8B54-CD347222E0FF}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
