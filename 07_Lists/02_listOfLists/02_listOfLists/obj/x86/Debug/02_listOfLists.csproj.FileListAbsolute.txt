@@ -1,0 +1,4 @@
+E:\csharp_series\07_Lists\02_listOfLists\02_listOfLists\bin\Debug\02_listOfLists.exe
+E:\csharp_series\07_Lists\02_listOfLists\02_listOfLists\bin\Debug\02_listOfLists.pdb
+E:\csharp_series\07_Lists\02_listOfLists\02_listOfLists\obj\x86\Debug\02_listOfLists.exe
+E:\csharp_series\07_Lists\02_listOfLists\02_listOfLists\obj\x86\Debug\02_listOfLists.pdb
