@@ -1,0 +1,5 @@
+E:\csharp_series\07_Lists\BasicAtmMachine\BasicAtmMachine\bin\Debug\BasicAtmMachine.exe
+E:\csharp_series\07_Lists\BasicAtmMachine\BasicAtmMachine\bin\Debug\BasicAtmMachine.pdb
+E:\csharp_series\07_Lists\BasicAtmMachine\BasicAtmMachine\obj\x86\Debug\BasicAtmMachine.exe
+E:\csharp_series\07_Lists\BasicAtmMachine\BasicAtmMachine\obj\x86\Debug\BasicAtmMachine.pdb
+E:\csharp_series\07_Lists\BasicAtmMachine\BasicAtmMachine\obj\x86\Debug\BasicAtmMachine.csprojResolveAssemblyReference.cache
