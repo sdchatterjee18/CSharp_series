@@ -28,6 +28,33 @@ class customer
         Console.WriteLine("ACCOUNT CREATED SUCCESSFULLY...");
         return new customer(0,Acc_no,PIN,Phone,Name);
     }
+    public static customer login(List<customer> customers)
+    {
+        Console.WriteLine("\n***Enter your specific account number and PIN to login***");
+        Console.WriteLine("\nEnter Account number :");
+        string account_no = Console.ReadLine();
+        Console.WriteLine("Enter your PIN :");
+        string pin = Console.ReadLine();
+        foreach (customer c in customers)
+        {
+            if (c.Acc_no == account_no)
+            {
+                if (c.PIN == pin)
+                {
+                    Console.WriteLine("LOGIN SUCCESSFUL...\n");
+                    return c;
+                }
+                else
+                {
+                    Console.WriteLine("WRONG PASSWORD....\nTry again\n");
+                    return null;
+                }
+            }
+           
+        }
+         Console.WriteLine("Account does not exist...\nTry Again\n");
+            return null;
+      }
     public void Withdraw()
     {
         Console.Write("Enter Amount to withdraw...  :");
@@ -65,76 +92,88 @@ namespace BasicAtmMachine
 {
     class Program
     {
-        static customer login(List<customer> customers)
+        
+        public static void logout(customer loggedIn)
         {
-            Console.WriteLine("***Enter your specific account number and PIN to login***");
-            Console.WriteLine("Enter Account number :");
-            string account_no = Console.ReadLine();
-            Console.WriteLine("Enter your PIN :");
-            string pin= Console.ReadLine();
-            foreach (customer c in customers)
+            if (loggedIn != null)
             {
-                if (c.Acc_no == account_no)
-                {
-                    if (c.PIN == pin)
-                    {
-                        Console.WriteLine("LOGIN SUCCESSFUL...");
-                        return c;
-                    }
-                    else
-                    {
-                        Console.WriteLine("WRONG PASSWORD....");
-                        return null;
-                    }
-                }
+                loggedIn = null;
+                Console.WriteLine("Logout successfull...");
             }
-            Console.WriteLine("Account does not exist...");
-            return null;          
         }
         static void Main(string[] args)
         {
             List<customer> AllCustomers = new List<customer>();
             level:
             Console.WriteLine("choose what do you want to do :");
-            Console.WriteLine(" | 1. CREATE ACCOUNT | 2.WITHDRAW | 3.DEPOSIT | 4.BALANCE CHECK | ");
+            Console.WriteLine(" | 1. CREATE ACCOUNT | 2.LOGIN | 3.EXIT");
             int choose = Convert.ToInt32(Console.ReadLine());
+            customer LoggedIn = null;
             switch(choose)
             {
                 case 1 :
-                    AllCustomers.Add(customer.CreateAccount());
-                     break;           
-               case 2:
-                    customer withdraw_customer=login(AllCustomers);
-                    if(withdraw_customer!=null)
+                     AllCustomers.Add(customer.CreateAccount());
+                     goto level;
+                             
+                case 2:
+                     if (LoggedIn == null)
+                     {
+                         while (LoggedIn == null)
+                         {
+                             LoggedIn = customer.login(AllCustomers);
+
+                             if (LoggedIn == null)
+                             {
+                                 Console.WriteLine("Do you want to try again ?");
+                                 Console.WriteLine("1.YES 2.NO");
+                                 int c = Convert.ToInt32(Console.ReadLine());
+                                 if (c == 2)
+                                 {
+                                     goto level;
+                                 }
+                             }
+                         }
+                     }
+                     else
+                     {
+                         Console.WriteLine("Already logged in...");
+                     }
+
+                     Console.WriteLine("\n\nHELLO!! {0}", LoggedIn.Name);
+                     agin:
+                     Console.WriteLine("What you want to perform ?");
+                     Console.WriteLine("1.Withdraw | 2.Deposit | 3.balace check | 4.Logout[Exit] ");
+                     int choose1 = Convert.ToInt32(Console.ReadLine());
+                     switch (choose1)
+                     {
+                         case 1:
+                             LoggedIn.Withdraw();
+                             break;
+                         case 2:
+                             LoggedIn.deposit();
+                             break;
+                         case 3:
+                             LoggedIn.BalanceCheck();
+                             break;
+                         case 4:
+                             logout(LoggedIn);
+                             goto level;  
+                         default:
+                             Console.WriteLine("\nEnter right choice...\nPlease Logout if you want to exit...");
+                             goto agin;
+                     }
+                    Console.WriteLine("\nDo you want any other services ?...");
+                    Console.WriteLine("choose 1 for YES and 2 for NO");
+                    int Agin_choose;
+                    Agin_choose = Convert.ToInt32(Console.ReadLine());
+                    switch(Agin_choose)
                     {
-                        
-                        withdraw_customer.Withdraw();
+                     case 1:
+                     goto agin;
                     }
-                     break;
-                case 3:
-                     customer deposit_customer = login(AllCustomers);
-                     if (deposit_customer != null)
-                     {
-                         deposit_customer.deposit();
-                     }
-                     break;
-                case 4:
-                     customer check_balance_customer = login(AllCustomers);
-                     if (check_balance_customer != null)
-                     {
-                         check_balance_customer.BalanceCheck();
-                     }
-                     break;
+                    break;
             }
-            Console.WriteLine("Do you want any other services ?...");
-            Console.WriteLine("choose 1 for YES and 2 for NO");
-            int Agin_choose;
-            Agin_choose = Convert.ToInt32(Console.ReadLine());
-            switch(Agin_choose)
-            {
-                case 1:
-                    goto level;
-            }
+
             Console.ReadLine();
         }
     }
