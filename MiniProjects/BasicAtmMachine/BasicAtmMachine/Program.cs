@@ -1,13 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
-class customer
+using System.Linq;
+static class CheckValidation
 {
-    public string Acc_no,PIN;
-    public int Balance;
-    public string Phone;
-    public string Name;
+    //-----ACCOUNT-NUMBER CHECKING METHOD----- 
+    public static string CheckAccountNo()
+    {
+        while (true)
+        {
+            Console.WriteLine("Enter acc no.(7 digits):");
+            string acc_no = Console.ReadLine();
+            if (acc_no.Length == 7 && acc_no.All(char.IsDigit))
+            {
+                return acc_no;
+            }
+            Console.WriteLine("You enter invalid account no!! must be 7 digits...");
+        }
 
-    public customer(int Balance, string Acc_no, string PIN, string Phone,string name)
+    }
+
+    //------PIN CHECKING METHOD------
+    public static string checkPin()
+    {
+        while (true)
+        {
+            Console.WriteLine("Generate a PIN(5 digits):");
+            string pin = Console.ReadLine();
+            if (pin.Length == 5 && pin.All(char.IsDigit))
+            {
+                return pin;
+            }
+            Console.WriteLine("You enter invalid Pin !! must be 5 digits...");
+        }
+
+    }
+}
+class Customer
+{
+    private string Acc_no,PIN;
+    private int Balance;
+    private string Phone;
+    private string Name;
+
+    public Customer(int Balance, string Acc_no, string PIN, string Phone,string name)
     {
         this.Acc_no = Acc_no;
         this.PIN = PIN;
@@ -15,33 +50,21 @@ class customer
         this.Phone = Phone;
         this.Name = name;
     }
-    public static customer CreateAccount()
-    {
-        Console.Write("Enter Account NO.(7 digits) :");
-        string Acc_no = Console.ReadLine();
-        Console.Write("Generate a PIN of 5 digits :");
-        string PIN = Console.ReadLine();
-        Console.Write("Enter your name :");
-        string Name = Console.ReadLine();
-        Console.Write("Enter Mobile number:");
-        string Phone = Console.ReadLine();       
-        Console.WriteLine("ACCOUNT CREATED SUCCESSFULLY...");
-        return new customer(0,Acc_no,PIN,Phone,Name);
-    }
-    public static customer login(List<customer> customers)
+
+    //-----LOGIN METHOD-----
+    public static Customer Login(List<Customer> customers)
     {
         Console.WriteLine("\n***Enter your specific account number and PIN to login***");
-        Console.WriteLine("\nEnter Account number :");
-        string account_no = Console.ReadLine();
-        Console.WriteLine("Enter your PIN :");
-        string pin = Console.ReadLine();
-        foreach (customer c in customers)
+        string account_no = CheckValidation.CheckAccountNo();
+        string pin = CheckValidation.checkPin();
+        foreach (Customer c in customers)
         {
             if (c.Acc_no == account_no)
             {
                 if (c.PIN == pin)
                 {
                     Console.WriteLine("LOGIN SUCCESSFUL...\n");
+                    Console.WriteLine("Hello !! {0}",c.Name);
                     return c;
                 }
                 else
@@ -50,22 +73,23 @@ class customer
                     return null;
                 }
             }
-           
+
         }
-         Console.WriteLine("Account does not exist...\nTry Again\n");
-            return null;
+                    Console.WriteLine("Account does not exist...\nTry Again\n");
+                   return null;
       }
-    public void Withdraw()
-    {
-        Console.Write("Enter Amount to withdraw...  :");
-        int amount = Convert.ToInt32(Console.ReadLine());  
-        if (amount < 0)
+
+
+    //-----WITHDRAW METHOD-----
+    public void Withdraw(int amount)
+    {          
+        if (amount <= 0)
         {
             Console.WriteLine("Enter right amount...");
         }
         else if (amount > Balance)
         {
-            Console.WriteLine("Insufficiant amount...");
+            Console.WriteLine("Insufficient amount...");
         }
         else
         {
@@ -74,105 +98,129 @@ class customer
         }
         
     }
-    public void deposit()
-    {
-        Console.WriteLine("Enter amount to deposit :");
-        int amount = Convert.ToInt32(Console.ReadLine());
-        Balance = Balance + amount;
-        Console.WriteLine("Deposit successfull...");
 
+
+    //-----DEPOSIT METHOD-----
+    public void Deposit(int amount)
+    {
+        if (amount <= 0)
+        {
+            Console.WriteLine("You enter invalid amount...");
+        }
+        else
+        {
+            Balance = Balance + amount;
+            Console.WriteLine("Deposit successfull...");
+        }
     }
+
+    //-----BALANCE CHECK METHOD-----
     public void BalanceCheck()
     {
         Console.WriteLine("Available Balance is :{0}",Balance);
     }
+
 }
 
 namespace BasicAtmMachine
 {
     class Program
     {
-        
-        public static void logout(customer loggedIn)
+       
+
+        //CREATE ACCOUNT AND ENTER DETAILS...
+        public static void CreateAccountInput(List<Customer> AllCustomers)
         {
-            if (loggedIn != null)
-            {
-                loggedIn = null;
-                Console.WriteLine("Logout successfull...");
-            }
+            string accNo =CheckValidation.CheckAccountNo();
+            string pin = CheckValidation.checkPin();
+            Console.WriteLine("Enter name :");
+            string name=Console.ReadLine();
+            Console.WriteLine("Enter mobile number :");
+            string phone=Console.ReadLine();
+            Console.WriteLine("Account created successfully...");
+            AllCustomers.Add(new Customer(0,accNo,pin,phone,name));
         }
+
+        //---------Main Method----------
         static void Main(string[] args)
         {
-            List<customer> AllCustomers = new List<customer>();
-            level:
-            Console.WriteLine("choose what do you want to do :");
-            Console.WriteLine(" | 1. CREATE ACCOUNT | 2.LOGIN | 3.EXIT");
-            int choose = Convert.ToInt32(Console.ReadLine());
-            customer LoggedIn = null;
-            switch(choose)
+            List<Customer> AllCustomers = new List<Customer>();
+           Customer LoggedIn = null;
+            bool exit = true;
+            while (exit)
             {
-                case 1 :
-                     AllCustomers.Add(customer.CreateAccount());
-                     goto level;
-                             
-                case 2:
-                     if (LoggedIn == null)
-                     {
-                         while (LoggedIn == null)
-                         {
-                             LoggedIn = customer.login(AllCustomers);
+                Console.WriteLine("Choose what do you want to do :");
+                Console.WriteLine(" | 1. CREATE ACCOUNT | 2.LOGIN | 3.EXIT");
+                int Choose = Convert.ToInt32(Console.ReadLine());
+                switch (Choose)
+                {
+                    case 1:
 
-                             if (LoggedIn == null)
-                             {
-                                 Console.WriteLine("Do you want to try again ?");
-                                 Console.WriteLine("1.YES 2.NO");
-                                 int c = Convert.ToInt32(Console.ReadLine());
-                                 if (c == 2)
-                                 {
-                                     goto level;
-                                 }
-                             }
-                         }
-                     }
-                     else
-                     {
-                         Console.WriteLine("Already logged in...");
-                     }
+                        CreateAccountInput(AllCustomers);
+                        
+                        break;
+                    case 2:
+                        bool check = true;
+                        while (check)
+                        {
+                            LoggedIn = Customer.Login(AllCustomers);
+                            if (LoggedIn == null)
+                            {
+                                Console.WriteLine("Do you want to try Again ? 1. yes 2. No ");
+                                int Temp_choose = Convert.ToInt32(Console.ReadLine());
+                                if (Temp_choose == 2)
+                                {
+                                    check = false;
+                                }
+                            }
+                            else
+                            {
+                                check = false;
+                            }
+                        }
+                        
+                        while (LoggedIn!=null)
+                        {
+                            Console.WriteLine("1.WITHDRAW  2.DEPOSIT  3.BALANCE-CHECK  4.LOGOUT[Exit]");
+                            int ChooseAgain = Convert.ToInt32(Console.ReadLine());
+                            switch (ChooseAgain)
+                            {
+                                case 1:
+                                    Console.Write("Enter Amount to withdraw...  :");
+                                    int amount = Convert.ToInt32(Console.ReadLine());
+                                    LoggedIn.Withdraw(amount);
+                                    break;
+                                case 2:
+                                    Console.WriteLine("Enter how much amount you want to deposit?");
+                                    amount = Convert.ToInt32(Console.ReadLine());
+                                    LoggedIn.Deposit(amount);
+                                    break;
+                                case 3:
+                                    LoggedIn.BalanceCheck();
+                                    break;
+                                case 4:
+                                    LoggedIn = null;
+                                    Console.WriteLine("Logout successfully...");                                    
+                                    break;
+                            }
+                            Console.WriteLine("do you want any other services ?? 1.Yes 2.No");
+                            ChooseAgain = Convert.ToInt32(Console.ReadLine());
+                            if (ChooseAgain == 2)
+                            {
+                                break;
+                            }
+                        }
+                       
 
-                     Console.WriteLine("\n\nHELLO!! {0}", LoggedIn.Name);
-                     agin:
-                     Console.WriteLine("What you want to perform ?");
-                     Console.WriteLine("1.Withdraw | 2.Deposit | 3.balace check | 4.Logout[Exit] ");
-                     int choose1 = Convert.ToInt32(Console.ReadLine());
-                     switch (choose1)
-                     {
-                         case 1:
-                             LoggedIn.Withdraw();
-                             break;
-                         case 2:
-                             LoggedIn.deposit();
-                             break;
-                         case 3:
-                             LoggedIn.BalanceCheck();
-                             break;
-                         case 4:
-                             logout(LoggedIn);
-                             goto level;  
-                         default:
-                             Console.WriteLine("\nEnter right choice...\nPlease Logout if you want to exit...");
-                             goto agin;
-                     }
-                    Console.WriteLine("\nDo you want any other services ?...");
-                    Console.WriteLine("choose 1 for YES and 2 for NO");
-                    int Agin_choose;
-                    Agin_choose = Convert.ToInt32(Console.ReadLine());
-                    switch(Agin_choose)
-                    {
-                     case 1:
-                     goto agin;
-                    }
-                    break;
+                        break;
+                    case 3:
+                        Console.WriteLine("Thank you!! Wish you a good day...");
+                        exit = false;
+                        break;
+                }
+
             }
+           
 
             Console.ReadLine();
         }
