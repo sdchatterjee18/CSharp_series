@@ -1,137 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-static class CheckValidation
-{
-    //-----ACCOUNT-NUMBER CHECKING METHOD----- 
-    public static string CheckAccountNo()
-    {
-        while (true)
-        {
-            Console.WriteLine("Enter acc no.(7 digits):");
-            string acc_no = Console.ReadLine();
-            if (acc_no.Length == 7 && acc_no.All(char.IsDigit))
-            {
-                return acc_no;
-            }
-            Console.WriteLine("You enter invalid account no!! must be 7 digits...");
-        }
-
-    }
-
-    //------PIN CHECKING METHOD------
-    public static string checkPin()
-    {
-        while (true)
-        {
-            Console.WriteLine("Generate a PIN(5 digits):");
-            string pin = Console.ReadLine();
-            if (pin.Length == 5 && pin.All(char.IsDigit))
-            {
-                return pin;
-            }
-            Console.WriteLine("You enter invalid Pin !! must be 5 digits...");
-        }
-
-    }
-}
-class Customer
-{
-    private string Acc_no,PIN;
-    private int Balance;
-    private string Phone;
-    private string Name;
-
-    public Customer(int Balance, string Acc_no, string PIN, string Phone,string name)
-    {
-        this.Acc_no = Acc_no;
-        this.PIN = PIN;
-        this.Balance = Balance;
-        this.Phone = Phone;
-        this.Name = name;
-    }
-
-    //-----LOGIN METHOD-----
-    public static Customer Login(List<Customer> customers)
-    {
-        Console.WriteLine("\n***Enter your specific account number and PIN to login***");
-        string account_no = CheckValidation.CheckAccountNo();
-        string pin = CheckValidation.checkPin();
-        foreach (Customer c in customers)
-        {
-            if (c.Acc_no == account_no)
-            {
-                if (c.PIN == pin)
-                {
-                    Console.WriteLine("LOGIN SUCCESSFUL...\n");
-                    Console.WriteLine("Hello !! {0}",c.Name);
-                    return c;
-                }
-                else
-                {
-                    Console.WriteLine("WRONG PASSWORD....\nTry again\n");
-                    return null;
-                }
-            }
-
-        }
-                    Console.WriteLine("Account does not exist...\nTry Again\n");
-                   return null;
-      }
 
 
-    //-----WITHDRAW METHOD-----
-    public void Withdraw(int amount)
-    {          
-        if (amount <= 0)
-        {
-            Console.WriteLine("Enter right amount...");
-        }
-        else if (amount > Balance)
-        {
-            Console.WriteLine("Insufficient amount...");
-        }
-        else
-        {
-            Balance = Balance - amount;
-            Console.WriteLine("WITHDRAW SUCCESSFULL....");
-        }
-        
-    }
 
-
-    //-----DEPOSIT METHOD-----
-    public void Deposit(int amount)
-    {
-        if (amount <= 0)
-        {
-            Console.WriteLine("You enter invalid amount...");
-        }
-        else
-        {
-            Balance = Balance + amount;
-            Console.WriteLine("Deposit successfull...");
-        }
-    }
-
-    //-----BALANCE CHECK METHOD-----
-    public void BalanceCheck()
-    {
-        Console.WriteLine("Available Balance is :{0}",Balance);
-    }
-
-}
 
 namespace BasicAtmMachine
 {
     class Program
     {
-       
-
         //CREATE ACCOUNT AND ENTER DETAILS...
         public static void CreateAccountInput(List<Customer> AllCustomers)
         {
+            Console.WriteLine("Enter you account no. to create your account :");
             string accNo =CheckValidation.CheckAccountNo();
+            Console.WriteLine("Generate a pin :");
             string pin = CheckValidation.checkPin();
             Console.WriteLine("Enter name :");
             string name=Console.ReadLine();
@@ -140,11 +23,10 @@ namespace BasicAtmMachine
             Console.WriteLine("Account created successfully...");
             AllCustomers.Add(new Customer(0,accNo,pin,phone,name));
         }
-
         //---------Main Method----------
         static void Main(string[] args)
         {
-            List<Customer> AllCustomers = new List<Customer>();
+           List<Customer> AllCustomers = new List<Customer>();
            Customer LoggedIn = null;
             bool exit = true;
             while (exit)
@@ -155,7 +37,7 @@ namespace BasicAtmMachine
                 switch (Choose)
                 {
                     case 1:
-
+                        
                         CreateAccountInput(AllCustomers);
                         
                         break;
@@ -163,19 +45,37 @@ namespace BasicAtmMachine
                         bool check = true;
                         while (check)
                         {
-                            LoggedIn = Customer.Login(AllCustomers);
+                            Console.WriteLine("\n***Enter your specific account number and PIN to login***");
+                            Console.WriteLine("Enter Account no. :");
+                            string account_no = CheckValidation.CheckAccountNo();
+                            Console.WriteLine("Enter Login PIN :");
+                            string pin = CheckValidation.checkPin();
+                            LoggedIn = Customer.Login(AllCustomers,account_no,pin);
+                            while(true)
                             if (LoggedIn == null)
                             {
-                                Console.WriteLine("Do you want to try Again ? 1. yes 2. No ");
+                                Console.WriteLine("Do you want to try login Again ? 1. yes 2. No ");
                                 int Temp_choose = Convert.ToInt32(Console.ReadLine());
                                 if (Temp_choose == 2)
                                 {
                                     check = false;
+                                    break;
                                 }
+                                else if (Temp_choose == 1)
+                                {
+                                    Console.WriteLine("Choose");
+                                    break;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("choosed wrong");
+                                }
+
                             }
                             else
                             {
                                 check = false;
+                                break;
                             }
                         }
                         
@@ -203,12 +103,26 @@ namespace BasicAtmMachine
                                     Console.WriteLine("Logout successfully...");                                    
                                     break;
                             }
-                            Console.WriteLine("do you want any other services ?? 1.Yes 2.No");
-                            ChooseAgain = Convert.ToInt32(Console.ReadLine());
-                            if (ChooseAgain == 2)
+                            while (true)
                             {
-                                break;
+                                Console.WriteLine("do you want any other services ?? 1.Yes 2.No");
+                                ChooseAgain = Convert.ToInt32(Console.ReadLine());
+                                if (ChooseAgain == 1)
+                                {
+                                    Console.WriteLine("Choose");
+                                    break;
+                                }
+                                else if (ChooseAgain == 2)
+                                {
+                                    LoggedIn = null;
+                                    break;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("You choose wrong !! choose again");
+                                }
                             }
+                            
                         }
                        
 
