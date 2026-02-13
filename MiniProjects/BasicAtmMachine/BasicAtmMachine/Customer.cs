@@ -7,10 +7,11 @@ namespace BasicAtmMachine
 {
     class Customer
     {
-            private string Acc_no, PIN;
-            private int Balance;
-            private string Phone;
-            private string Name;
+        private string Acc_no;
+        private string PIN;
+        private int Balance;
+        private string Phone;
+        private string Name;
 
             public Customer(int Balance, string Acc_no, string PIN, string Phone, string name)
             {
@@ -21,33 +22,21 @@ namespace BasicAtmMachine
                 this.Name = name;
             }
 
-            //-----LOGIN METHOD-----
-            public static Customer Login(List<Customer> customers, string account_no, string pin)
+            //verify Pin
+            public bool VerifyPin(string pin)
             {
-                
-                foreach (Customer c in customers)
+                if (PIN == pin)
                 {
-                    if (c.Acc_no == account_no)
-                    {
-                        if (c.PIN == pin)
-                        {
-                            Console.WriteLine("LOGIN SUCCESSFUL...\n");
-                            Console.WriteLine("Hello !! {0}", c.Name);
-                            return c;
-                        }
-                        else
-                        {
-                            Console.WriteLine("WRONG PASSWORD....\nTry again\n");
-                            return null;
-                        }
-                    }
-
+                    Console.WriteLine("Hello!! {0}", Name);
+                    return true;
                 }
-                Console.WriteLine("Account does not exist...\nTry Again\n");
-                return null;
+                return false;
             }
-
-
+            //verifyAccount
+            public bool VerifyAccount(string account)
+            {
+                return Acc_no == account;
+            }
             //-----WITHDRAW METHOD-----
             public void Withdraw(int amount)
             {

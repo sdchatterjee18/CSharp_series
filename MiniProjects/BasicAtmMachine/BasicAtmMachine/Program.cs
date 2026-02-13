@@ -50,7 +50,7 @@ namespace BasicAtmMachine
                             string account_no = CheckValidation.CheckAccountNo();
                             Console.WriteLine("Enter Login PIN :");
                             string pin = CheckValidation.checkPin();
-                            LoggedIn = Customer.Login(AllCustomers,account_no,pin);
+                            LoggedIn =Authentication.Login(AllCustomers,account_no,pin);
                             while(true)
                             if (LoggedIn == null)
                             {
