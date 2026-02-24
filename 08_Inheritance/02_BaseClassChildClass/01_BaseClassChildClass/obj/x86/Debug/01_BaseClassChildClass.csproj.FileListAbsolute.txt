@@ -1,0 +1,4 @@
+E:\csharp_series\08_Inheritance\01_BaseClassChildClass\01_BaseClassChildClass\bin\Debug\01_BaseClassChildClass.exe
+E:\csharp_series\08_Inheritance\01_BaseClassChildClass\01_BaseClassChildClass\bin\Debug\01_BaseClassChildClass.pdb
+E:\csharp_series\08_Inheritance\01_BaseClassChildClass\01_BaseClassChildClass\obj\x86\Debug\01_BaseClassChildClass.exe
+E:\csharp_series\08_Inheritance\01_BaseClassChildClass\01_BaseClassChildClass\obj\x86\Debug\01_BaseClassChildClass.pdb
