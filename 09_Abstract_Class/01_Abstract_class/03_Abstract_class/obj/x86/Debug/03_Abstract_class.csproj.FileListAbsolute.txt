@@ -1,0 +1,4 @@
+E:\csharp_series\08_Inheritance\03_Abstract_class\03_Abstract_class\bin\Debug\03_Abstract_class.exe
+E:\csharp_series\08_Inheritance\03_Abstract_class\03_Abstract_class\bin\Debug\03_Abstract_class.pdb
+E:\csharp_series\08_Inheritance\03_Abstract_class\03_Abstract_class\obj\x86\Debug\03_Abstract_class.exe
+E:\csharp_series\08_Inheritance\03_Abstract_class\03_Abstract_class\obj\x86\Debug\03_Abstract_class.pdb
