@@ -1,0 +1,4 @@
+E:\csharp_series\11_Encapsulation\FieldAndProperty\FieldAndProperty\bin\Debug\FieldAndProperty.exe
+E:\csharp_series\11_Encapsulation\FieldAndProperty\FieldAndProperty\bin\Debug\FieldAndProperty.pdb
+E:\csharp_series\11_Encapsulation\FieldAndProperty\FieldAndProperty\obj\x86\Debug\FieldAndProperty.exe
+E:\csharp_series\11_Encapsulation\FieldAndProperty\FieldAndProperty\obj\x86\Debug\FieldAndProperty.pdb
