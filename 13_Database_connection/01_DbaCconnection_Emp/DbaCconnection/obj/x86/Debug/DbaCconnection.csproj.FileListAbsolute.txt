@@ -1,0 +1,5 @@
+E:\csharp_series\13_Database_connection\DbaCconnection\DbaCconnection\bin\Debug\DbaCconnection.exe.config
+E:\csharp_series\13_Database_connection\DbaCconnection\DbaCconnection\bin\Debug\DbaCconnection.exe
+E:\csharp_series\13_Database_connection\DbaCconnection\DbaCconnection\bin\Debug\DbaCconnection.pdb
+E:\csharp_series\13_Database_connection\DbaCconnection\DbaCconnection\obj\x86\Debug\DbaCconnection.exe
+E:\csharp_series\13_Database_connection\DbaCconnection\DbaCconnection\obj\x86\Debug\DbaCconnection.pdb
