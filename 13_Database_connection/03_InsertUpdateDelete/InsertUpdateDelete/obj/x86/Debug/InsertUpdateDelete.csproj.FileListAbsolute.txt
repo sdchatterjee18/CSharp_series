@@ -1,0 +1,6 @@
+E:\csharp_series\13_Database_connection\InsertUpdateDelete\InsertUpdateDelete\bin\Debug\InsertUpdateDelete.exe.config
+E:\csharp_series\13_Database_connection\InsertUpdateDelete\InsertUpdateDelete\bin\Debug\InsertUpdateDelete.exe
+E:\csharp_series\13_Database_connection\InsertUpdateDelete\InsertUpdateDelete\bin\Debug\InsertUpdateDelete.pdb
+E:\csharp_series\13_Database_connection\InsertUpdateDelete\InsertUpdateDelete\obj\x86\Debug\InsertUpdateDelete.exe
+E:\csharp_series\13_Database_connection\InsertUpdateDelete\InsertUpdateDelete\obj\x86\Debug\InsertUpdateDelete.pdb
+E:\csharp_series\13_Database_connection\InsertUpdateDelete\InsertUpdateDelete\obj\x86\Debug\InsertUpdateDelete.csprojResolveAssemblyReference.cache
