@@ -1,0 +1,5 @@
+E:\csharp_series\13_Database_connection\UsingStoreProcedure\UsingStoreProcedure\bin\Debug\UsingStoreProcedure.exe.config
+E:\csharp_series\13_Database_connection\UsingStoreProcedure\UsingStoreProcedure\bin\Debug\UsingStoreProcedure.exe
+E:\csharp_series\13_Database_connection\UsingStoreProcedure\UsingStoreProcedure\bin\Debug\UsingStoreProcedure.pdb
+E:\csharp_series\13_Database_connection\UsingStoreProcedure\UsingStoreProcedure\obj\x86\Debug\UsingStoreProcedure.exe
+E:\csharp_series\13_Database_connection\UsingStoreProcedure\UsingStoreProcedure\obj\x86\Debug\UsingStoreProcedure.pdb
