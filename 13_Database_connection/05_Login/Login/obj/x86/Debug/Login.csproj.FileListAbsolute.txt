@@ -1,0 +1,5 @@
+E:\csharp_series\13_Database_connection\Login\Login\bin\Debug\Login.exe.config
+E:\csharp_series\13_Database_connection\Login\Login\bin\Debug\Login.exe
+E:\csharp_series\13_Database_connection\Login\Login\bin\Debug\Login.pdb
+E:\csharp_series\13_Database_connection\Login\Login\obj\x86\Debug\Login.exe
+E:\csharp_series\13_Database_connection\Login\Login\obj\x86\Debug\Login.pdb
