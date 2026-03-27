@@ -1,0 +1,6 @@
+E:\csharp_series\13_Database_connection\06_BankLogin\BankLogin\bin\Debug\BankLogin.exe.config
+E:\csharp_series\13_Database_connection\06_BankLogin\BankLogin\bin\Debug\BankLogin.exe
+E:\csharp_series\13_Database_connection\06_BankLogin\BankLogin\bin\Debug\BankLogin.pdb
+E:\csharp_series\13_Database_connection\06_BankLogin\BankLogin\obj\x86\Debug\BankLogin.exe
+E:\csharp_series\13_Database_connection\06_BankLogin\BankLogin\obj\x86\Debug\BankLogin.pdb
+E:\csharp_series\13_Database_connection\06_BankLogin\BankLogin\obj\x86\Debug\BankLogin.csprojResolveAssemblyReference.cache
