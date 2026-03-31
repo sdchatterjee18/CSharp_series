@@ -99,6 +99,33 @@ namespace BankLogin
                 }
             }
         }
+        public int DeleteDataFromDatabase()
+        {
+            string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            int rowsEffected = 0;
+            SqlConnection sqlConnection = null;
+            try
+            {
+                sqlConnection = new SqlConnection(CS);
+                SqlCommand sqlCommand = new SqlCommand("spDeleteAccount", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@CustomerID",this.CustomerID);
+                sqlConnection.Open();
+                rowsEffected = sqlCommand.ExecuteNonQuery();
+                return rowsEffected;
+            }
+            catch (Exception ex)
+            {
+                return rowsEffected;
+            }
+            finally
+            {
+                if (sqlConnection != null)
+                {
+                    sqlConnection.Close();
+                }
+            }
+        }
     }
     class Program
     {
@@ -134,12 +161,17 @@ namespace BankLogin
             Console.WriteLine("Create your own Password :");
             customer.Password = Console.ReadLine();
         }
+        static void EnterCustomerIDtoDeleteAcc(Customer c)
+        {
+            Console.WriteLine("Enter your C_ID to delete Your Account");
+            c.CustomerID = Convert.ToInt32(Console.ReadLine());
+        }
         static void Main(string[] args)
         {
             Customer customer = new Customer();
             int rowsEffected;
             Console.WriteLine(".........Choose What you want to do........");
-            Console.WriteLine("1.Create Acc 2.Update Deatils 3.Delete Account 4.Login");
+            Console.WriteLine("1.Create Acc 2.Update Deatils 3.Delete Account 4.Login 5.Exit");
             int choose = Convert.ToInt32(Console.ReadLine());
             switch (choose)
             {
@@ -163,6 +195,20 @@ namespace BankLogin
                         Console.WriteLine("OOps!! wrong ID and password");
                     }
                     break;
+                case 3:
+                    Console.WriteLine("Enter ID and Password to delete your Account...");
+                    EnterID_PassWhileLogin(customer);
+                    if (customer.LoginCheckByIdPass())
+                    {
+                        rowsEffected = customer.DeleteDataFromDatabase();
+                        DisplayMassege(rowsEffected);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Please Enter the right ID and Passowrd");
+                    }
+                    break;
+
             }
             Console.ReadLine();
         }
