@@ -1,0 +1,5 @@
+E:\csharp_series\13_Database_connection\OnlineBanking\OnlineBanking\bin\Debug\OnlineBanking.exe
+E:\csharp_series\13_Database_connection\OnlineBanking\OnlineBanking\bin\Debug\OnlineBanking.pdb
+E:\csharp_series\13_Database_connection\OnlineBanking\OnlineBanking\obj\x86\Debug\OnlineBanking.exe
+E:\csharp_series\13_Database_connection\OnlineBanking\OnlineBanking\obj\x86\Debug\OnlineBanking.pdb
+E:\csharp_series\13_Database_connection\OnlineBanking\OnlineBanking\bin\Debug\OnlineBanking.exe.config
