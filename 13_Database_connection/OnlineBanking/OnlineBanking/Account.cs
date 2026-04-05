@@ -12,8 +12,8 @@ namespace OnlineBanking
         public int CustomerID { get; private set; }
         public int AccountNo { get;  private set; }
         private double Balance;
-        private string PIN;
-        public void AssignAccountDetails(int Acc,string Pin,int C_ID)
+        private int PIN;
+        public void AssignAccountDetails(int Acc,int Pin,int C_ID)
         {
             CustomerID = C_ID;
             PIN = Pin;
@@ -42,6 +42,89 @@ namespace OnlineBanking
             catch(Exception ex)
             {
                 return rowsEffected;
+            }
+            finally
+            {
+                if (sqlConnection != null)
+                {
+                    sqlConnection.Close();
+                }
+            }
+        }
+        public int? GetAccountNoForTransactions(int C_ID)
+        {
+            string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection sqlConnection = null;
+            try
+            {
+                sqlConnection = new SqlConnection(CS);
+                SqlCommand sqlCommand = new SqlCommand("GetAccountNoByCustomerID", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@CustomerID", C_ID);
+                sqlConnection.Open();
+                AccountNo = Convert.ToInt32(sqlCommand.ExecuteScalar());
+                return AccountNo;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                if (sqlConnection != null)
+                {
+                    sqlConnection.Close();
+                }
+            }
+        }
+        public double? GetBalanceByAccountNo(int AccountNo)
+        {
+            string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection sqlConnection = null;
+            Balance = 0;
+            try
+            {
+                sqlConnection = new SqlConnection(CS);
+                SqlCommand sqlCommand = new SqlCommand("GetBankBalanceByCustomerID", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@AccountNo",AccountNo);
+                sqlConnection.Open();
+                Balance =Convert.ToInt32(sqlCommand.ExecuteScalar());
+                return Balance;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            finally
+            {
+                if (sqlConnection != null)
+                {
+                    sqlConnection.Close();
+                }
+            }
+        }
+        public double? DepositAmountUsingAccountNo(int AccountNo,double Balance,double Deposit)
+        {
+            string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection sqlConnection = null;
+            Balance = Balance+Deposit;
+            try
+            {
+
+                
+                sqlConnection = new SqlConnection(CS);
+                SqlCommand sqlCommand = new SqlCommand("spDepositBalanceThroughAccountNo", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@AccountNo",AccountNo);
+                sqlCommand.Parameters.AddWithValue("@Balance", Balance);
+                sqlConnection.Open();
+                Balance = Convert.ToDouble(sqlCommand.ExecuteScalar());
+                return Balance;
+            }
+            catch (Exception ex)
+            {
+                return null;
             }
             finally
             {

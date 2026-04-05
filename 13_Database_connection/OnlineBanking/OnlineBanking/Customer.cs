@@ -13,6 +13,7 @@ namespace OnlineBanking
         public int CustomerID { get; private set; }
         public string CustomerName { get; private set; }
         private string Password;
+
         public void InsertDetails(string Name, string Pass)
         {
             this.CustomerName = Name;
@@ -43,6 +44,33 @@ namespace OnlineBanking
             {
                 if (sqlConnection != null)
                     sqlConnection.Close();
+            }
+        }
+        public string GetNameOfCustomer(int C_ID)
+        {
+            string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection sqlConnection =null;
+            string CustomerName = null;
+            try
+            {
+                sqlConnection = new SqlConnection(CS);
+                SqlCommand sqlCommand = new SqlCommand("GetNameOfCustomer", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@CustomerID", C_ID);
+                sqlConnection.Open();
+                this.CustomerName=Convert.ToString(sqlCommand.ExecuteScalar());
+                return CustomerName;
+            }
+            catch (Exception ex)
+            {
+                return CustomerName;
+            }
+            finally
+            {
+                if (sqlConnection != null)
+                {
+                    sqlConnection.Close();
+                }
             }
         }
     }
