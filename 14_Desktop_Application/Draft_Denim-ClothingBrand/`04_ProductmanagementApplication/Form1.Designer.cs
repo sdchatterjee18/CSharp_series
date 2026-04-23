@@ -172,7 +172,7 @@
             // MainForm_SidePanel
             // 
             this.MainForm_SidePanel.BackColor = System.Drawing.Color.White;
-            this.MainForm_SidePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainForm_SidePanel.BackgroundImage")));
+            this.MainForm_SidePanel.BackgroundImage = global::_04_ProductmanagementApplication.Properties.Resources.final_sidebar;
             this.MainForm_SidePanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.MainForm_SidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.MainForm_SidePanel.Location = new System.Drawing.Point(0, 47);

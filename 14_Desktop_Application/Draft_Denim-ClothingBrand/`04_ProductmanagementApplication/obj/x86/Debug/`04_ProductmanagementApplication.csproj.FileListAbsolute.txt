@@ -6,3 +6,5 @@ E:\csharp_series\14_Desktop_Application\`04_ProductmanagementApplication\`04_Pro
 E:\csharp_series\14_Desktop_Application\`04_ProductmanagementApplication\`04_ProductmanagementApplication\obj\x86\Debug\`04_ProductmanagementApplication.pdb
 E:\csharp_series\14_Desktop_Application\`04_ProductmanagementApplication\`04_ProductmanagementApplication\obj\x86\Debug\_04_ProductmanagementApplication.Form1.resources
 E:\csharp_series\14_Desktop_Application\`04_ProductmanagementApplication\`04_ProductmanagementApplication\obj\x86\Debug\_04_ProductmanagementApplication.SignUpForm.resources
+E:\csharp_series\14_Desktop_Application\Draft_Denim-ClothingBrand\`04_ProductmanagementApplication\obj\x86\Debug\`04_ProductmanagementApplication.exe
+E:\csharp_series\14_Desktop_Application\Draft_Denim-ClothingBrand\`04_ProductmanagementApplication\obj\x86\Debug\`04_ProductmanagementApplication.pdb

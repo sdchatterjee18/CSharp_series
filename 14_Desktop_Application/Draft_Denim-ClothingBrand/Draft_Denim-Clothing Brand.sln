@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "`04_ProductmanagementApplication", "`04_ProductmanagementApplication\`04_ProductmanagementApplication.csproj", "{050A8998-B264-4FFD-B0DE-5FDA172560AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_ProductmanagementApplication", "`04_ProductmanagementApplication\04_ProductmanagementApplication.csproj", "{050A8998-B264-4FFD-B0DE-5FDA172560AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
