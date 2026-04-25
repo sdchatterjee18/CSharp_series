@@ -11,11 +11,14 @@ namespace _04_ProductmanagementApplication
 {
     public partial class SignUpForm : Form
     {
-        public SignUpForm()
+        private Form1 mainform;
+        public SignUpForm(Form1 f)
         {
             InitializeComponent();
+            mainform = f;
         }
 
+        //sign up button click
         private void btnSignup_Click(object sender, EventArgs e)
         {
             ClearFields();
@@ -31,21 +34,19 @@ namespace _04_ProductmanagementApplication
                          int rowsEffected = customer.InsertDataIntoDatabase();
                          if (rowsEffected > 0)
                          {
-                             lblMassegeBox.Text = "Account Created Successfully";
-                             lblMassegeBox.BackColor = Color.Green;
+                             mainform.Load_form_in_panel(new SignUpSuccessMsg(rowsEffected, mainform));
                          }
                          else
                          {
-                             lblMassegeBox.Text = "Some Error occured.. Try Again";
-                             lblMassegeBox.BackColor = Color.Red;
+                             mainform.Load_form_in_panel(new SignUpSuccessMsg(rowsEffected, mainform));
                          }
+
                     }
                 }
             }
         }
 
         //checking null&whiteSpace fields
-
         private bool CheckNullFields()
         {
             bool isvalid = true;
@@ -148,12 +149,12 @@ namespace _04_ProductmanagementApplication
                 }
                 else
                 {
-                    LastName = null;
+                    LastName = "";
                 }
                 return Names[0];
         }
 
-        //clear all fields if values not inserted before signup btn click
+        //clear all fields if values not inserted before clicking signup btn 
         private void ClearFields()
         {
             if (count_Name_click == 0)
@@ -217,6 +218,11 @@ namespace _04_ProductmanagementApplication
                 lblMassegeBox.BackColor = Color.Red;
                 return false;
             }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            mainform.Load_form_in_panel(new Default_load_form(mainform));
         }
     }
 }

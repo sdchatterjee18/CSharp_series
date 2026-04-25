@@ -41,13 +41,13 @@
             this.lblCustomerGmail = new System.Windows.Forms.Label();
             this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.lblCustomerName = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             this.panelSignupDetails.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSignupDetails
             // 
             this.panelSignupDetails.BackColor = System.Drawing.Color.Transparent;
-            this.panelSignupDetails.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelSignupDetails.Controls.Add(this.btnSignup);
             this.panelSignupDetails.Controls.Add(this.lblMassegeBox);
             this.panelSignupDetails.Controls.Add(this.txtConfirmPassword);
@@ -72,7 +72,7 @@
             this.btnSignup.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSignup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignup.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignup.Location = new System.Drawing.Point(181, 334);
+            this.btnSignup.Location = new System.Drawing.Point(212, 342);
             this.btnSignup.Name = "btnSignup";
             this.btnSignup.Size = new System.Drawing.Size(106, 26);
             this.btnSignup.TabIndex = 11;
@@ -85,7 +85,7 @@
             this.lblMassegeBox.AutoSize = true;
             this.lblMassegeBox.BackColor = System.Drawing.Color.Silver;
             this.lblMassegeBox.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMassegeBox.Location = new System.Drawing.Point(3, 341);
+            this.lblMassegeBox.Location = new System.Drawing.Point(3, 346);
             this.lblMassegeBox.Name = "lblMassegeBox";
             this.lblMassegeBox.Padding = new System.Windows.Forms.Padding(2);
             this.lblMassegeBox.Size = new System.Drawing.Size(151, 18);
@@ -212,13 +212,31 @@
             this.lblCustomerName.TabIndex = 0;
             this.lblCustomerName.Text = "Name";
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnBack.FlatAppearance.BorderSize = 3;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.Red;
+            this.btnBack.Location = new System.Drawing.Point(596, 3);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(39, 35);
+            this.btnBack.TabIndex = 3;
+            this.btnBack.Text = "X";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::_04_ProductmanagementApplication.Properties.Resources.resized_signup_background;
             this.ClientSize = new System.Drawing.Size(636, 434);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.panelSignupDetails);
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SignUpForm";
             this.Text = "SignUpForm";
@@ -243,6 +261,7 @@
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Button btnSignup;
+        private System.Windows.Forms.Button btnBack;
 
     }
 }

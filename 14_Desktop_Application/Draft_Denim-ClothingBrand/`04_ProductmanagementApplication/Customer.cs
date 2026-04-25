@@ -25,6 +25,10 @@ namespace _04_ProductmanagementApplication
             this.UserName = UserName;
             this.Password = Password;
         }
+        public Customer()
+        {
+
+        }
         public int InsertDataIntoDatabase()
         {
             string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
@@ -49,6 +53,70 @@ namespace _04_ProductmanagementApplication
             catch (Exception ex)
             {
                 return rowsEffected;
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
+        }
+        public bool LoginCustomer()
+        {
+            string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection sqlConnection = null;
+            bool isExist = false;
+            try
+            {
+                sqlConnection = new SqlConnection(CS);
+                using (SqlCommand sqlCommand = new SqlCommand("spLoginCustomerByGmailAndPassword", sqlConnection))
+                {
+                    sqlCommand.CommandType = CommandType.StoredProcedure;
+                    sqlCommand.Parameters.AddWithValue("@Gmail", this.G_mail);
+                    sqlCommand.Parameters.AddWithValue("@Password", this.Password);
+                    sqlConnection.Open();
+                    isExist =Convert.ToBoolean(sqlCommand.ExecuteNonQuery());
+                    return isExist;
+                }
+            }
+            catch(Exception ex)
+            {
+                return isExist;
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
+        }
+        public void AssignLoginDetails(string gmail,string password)
+        {
+            this.G_mail = gmail;
+            this.Password = password;
+        }
+        public static Customer GetDetails(string G_mail)
+        {
+            string CS = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+            SqlConnection sqlConnection = null;
+            Customer customer = null;
+            try
+            {
+                sqlConnection = new SqlConnection(CS);
+                using (SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("spGetDetailsAfterLogin", sqlConnection))
+                {
+                    sqlDataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    sqlDataAdapter.SelectCommand.Parameters.AddWithValue("@gmail", G_mail);
+                    DataTable dataTable = new DataTable();
+                    sqlDataAdapter.Fill(dataTable);
+                    DataRow row = dataTable.Rows[0];
+                    customer = new Customer();
+                    customer.CustomerId =Convert.ToInt32(row["CustomerId"]);
+                    customer.CustomerFirstName =row["FirstName"].ToString();
+                    customer.CustomerSecondName = row["SecondName"].ToString();
+                    customer.UserName = row["UserName"].ToString();
+                    return customer;
+                }
+            }
+            catch (Exception ex)
+            {
+                return customer;
             }
             finally
             {
