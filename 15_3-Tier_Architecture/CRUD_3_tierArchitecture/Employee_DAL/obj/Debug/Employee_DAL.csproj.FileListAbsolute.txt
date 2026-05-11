@@ -1,0 +1,4 @@
+E:\csharp_series\3-Tier_Architecture\CRUD_3_tierArchitecture\Employee_DAL\bin\Debug\Employee_DAL.dll
+E:\csharp_series\3-Tier_Architecture\CRUD_3_tierArchitecture\Employee_DAL\bin\Debug\Employee_DAL.pdb
+E:\csharp_series\3-Tier_Architecture\CRUD_3_tierArchitecture\Employee_DAL\obj\Debug\Employee_DAL.dll
+E:\csharp_series\3-Tier_Architecture\CRUD_3_tierArchitecture\Employee_DAL\obj\Debug\Employee_DAL.pdb

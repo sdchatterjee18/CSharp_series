@@ -1,0 +1,6 @@
+E:\csharp_series\3-Tier_Architecture\CRUD_3_tierArchitecture\CRUD_3_tierArchitecture\bin\Debug\CRUD_3_tierArchitecture.exe
+E:\csharp_series\3-Tier_Architecture\CRUD_3_tierArchitecture\CRUD_3_tierArchitecture\bin\Debug\CRUD_3_tierArchitecture.pdb
+E:\csharp_series\3-Tier_Architecture\CRUD_3_tierArchitecture\CRUD_3_tierArchitecture\obj\x86\Debug\CRUD_3_tierArchitecture.Properties.Resources.resources
+E:\csharp_series\3-Tier_Architecture\CRUD_3_tierArchitecture\CRUD_3_tierArchitecture\obj\x86\Debug\CRUD_3_tierArchitecture.csproj.GenerateResource.Cache
+E:\csharp_series\3-Tier_Architecture\CRUD_3_tierArchitecture\CRUD_3_tierArchitecture\obj\x86\Debug\CRUD_3_tierArchitecture.exe
+E:\csharp_series\3-Tier_Architecture\CRUD_3_tierArchitecture\CRUD_3_tierArchitecture\obj\x86\Debug\CRUD_3_tierArchitecture.pdb

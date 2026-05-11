@@ -1,0 +1,4 @@
+E:\csharp_series\3-Tier_Architecture\CRUD_3_tierArchitecture\BLL\bin\Debug\BLL.dll
+E:\csharp_series\3-Tier_Architecture\CRUD_3_tierArchitecture\BLL\bin\Debug\BLL.pdb
+E:\csharp_series\3-Tier_Architecture\CRUD_3_tierArchitecture\BLL\obj\Debug\BLL.dll
+E:\csharp_series\3-Tier_Architecture\CRUD_3_tierArchitecture\BLL\obj\Debug\BLL.pdb

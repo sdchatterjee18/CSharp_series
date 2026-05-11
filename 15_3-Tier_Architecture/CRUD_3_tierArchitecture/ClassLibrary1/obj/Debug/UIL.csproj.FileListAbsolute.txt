@@ -1,0 +1,4 @@
+E:\csharp_series\3-Tier_Architecture\CRUD_3_tierArchitecture\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+E:\csharp_series\3-Tier_Architecture\CRUD_3_tierArchitecture\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+E:\csharp_series\3-Tier_Architecture\CRUD_3_tierArchitecture\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+E:\csharp_series\3-Tier_Architecture\CRUD_3_tierArchitecture\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
